@@ -7,7 +7,7 @@ print("Welcome to Jurassic Park interactive system\n")
 name = input("Please inform your name: \n")
 user = input("Please, indicate whether you are a Visitor or an Employee:\n")
 
-class MenuRoll: #Chama o menu de Visitante ou Funcionário, dependendo da resposta do usuário
+class MenuRoll: #Ok - Aloca o Visitante/Funcionario pro MainMenu certo
     def __init__(self,user):
         self.user = user
 
@@ -19,7 +19,7 @@ class MenuRoll: #Chama o menu de Visitante ou Funcionário, dependendo da respos
             user=MainMenu(name)
             return user.menuemployee()
 
-class MainMenu: #Pergunta qual item do Menu o usuário quer
+class MainMenu: #Ok - Pergunta qual item do menu o usuario quer
     def __init__(self,name):
         self.name = name
 
@@ -39,14 +39,12 @@ class MainMenu: #Pergunta qual item do Menu o usuário quer
             choice = int(input("Invalid option. Please choose either 1, 2 or 3 as per the options shown above:\n"))
         return choice
 
-#execucao = MenuRoll(user) -TESTE DAS CLASSES ANTERIORES
+execucao = MenuRoll(user) #-TESTE DAS CLASSES ANTERIORES
 #print(execucao.execute())
 
-
-class VisitorsMenu: #OK- Encapsulamento
+class VisitorsMenu: #Ok - Executa opcoes do Visitante
     def __init__(self, choice):
         self.choice = choice
-        #self.dinosaur = dinodictionary
         
     def visitor1_knowthepark(self):
         print("\nThe park is divided in 4 main areas. The carnivores are located at the east and west zones, whereas the herbivores are in the North and South.\nThe Helicopter ride is located at the South shore.\nThe Port is at the East shore.\nThe Visitor center is at the West island.\nYou can get a map with all locations and attractions at the Visitor Center.\n")
@@ -76,32 +74,7 @@ class VisitorsMenu: #OK- Encapsulamento
         else:
             return self.visitor3_attractions()
 
-
-teste3=VisitorsMenu(execucao.execute())
-print(teste3.visitor_execucao())
-
-class EmployeeMenu: 
-    def __init__(self, choice, user):
-        self.choice = choice
-        
-        
-    def employee1_employeeinfo(self):
-        pass
-
-    def employee1_labs(self):
-        pass
-        
-class Execucao(MenuRoll): #Herdando o usuario (visitante/employee)
-    def __init__(self,user):
-        #super().__init__(user):
-        pass
-
-
-    def execucao(self):
-        #IF choice & user, puxar visitor menu, opcao certa
-
-
-class Restart: #OK
+class Restart: #Ok - Pergunta se quer continuar navegando
     def __init__(self,user):
         self.user = user
     
@@ -113,3 +86,6 @@ class Restart: #OK
 
         else:
             return "Thank you for using Jurassic Park's interactive system"
+
+teste3=VisitorsMenu(execucao.execute())
+print(teste3.visitor_execucao())
