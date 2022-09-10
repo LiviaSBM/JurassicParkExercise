@@ -8,7 +8,7 @@ name = input("Please inform your name: \n")
 user = input("Please, indicate whether you are a Visitor or an Employee:\n")
 
 #Fazer um IF pra chamar o módulo de visitor ou de employee
-class MainMenu:
+class MainMenu: #Pergunta qual item do Menu o usuário quer
     def __init__(self,name):
         self.name = name
 
@@ -28,13 +28,48 @@ class MainMenu:
             choice = int(input("Invalid option. Please choose either 1, 2 or 3 as per the options shown above:\n"))
         return choice
 
-class Employee(MainMenu):
-    pass
-    #def __init__(self, name, option):
+class MenuRoll: #Chama o menu de Visitante ou Empregado, dependendo da resposta do user
+    def __init__(self,user):
+        self.user = user
+
+    def execute(self):
+        if self.user=="visitor" or self.user=="Visitor":
+            user=MainMenu(name)
+            return user.menuvisitor()
+        elif self.user=="employee" or self.user=="Employee":
+            user=MainMenu(name)
+            return user.menuemployee()
+        
+#execucao = MenuRoll(user) -TESTE DAS CLASSES ANTERIORES
+#print(execucao.execute())
+
+
+class Execution(MainMenu): #herança, usar super()
+    def __init__(self, choice):
+        self.choice = choice
+
+    #fazer um def visitor q vai puxar outra classe e módulo dependendo do item escolhido
+    def visitor(self):
+        pass #
+
+    def employee(self):
+        pass
+
         
 
-class Visitor:
-    pass
+class Visitor(MainMenu):
+    def __init__(self, choice):
+        self.choice = choice
+        #super().__init__(name)
+
+    def choice1_knowthepark(self):
+        print("The park is divided in 4 main areas. The carnivores are located at the east and west zones, whereas the herbivores are in the North and South.\nThe Helicopter ride is located at the South shore.\nThe Port is at the East shore.\nThe Visitor center is at the West island.\nYou can get a map with all locations and attractions at the Visitor Center.\n")
+
+        finish = input("Would you like to navegate anymore through our sistem? Answer Yes or No\n")
+        if finish == yes or finish == Yes or finish == YES:
+            return
+
+
 
 class DinoCatalogue:
 
@@ -49,12 +84,4 @@ class Atractions:
 class DNALab:
     #fazer classe privada
 
-#Início das chamadas das classes
 
-
-if user=="visitor" or user=="Visitor":
-    user=MainMenu(name)
-    print(user.menuvisitor())
-elif user=="employee" or user=="Employee":
-    user=MainMenu(name)
-    print(user.menuemployee())
