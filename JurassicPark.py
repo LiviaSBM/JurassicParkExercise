@@ -46,24 +46,24 @@ class MainMenu: #Pergunta qual item do Menu o usuário quer
 class VisitorsMenu: #OK- Encapsulamento
     def __init__(self, choice):
         self.choice = choice
-        self.dinosaur = dinodictionary
+        #self.dinosaur = dinodictionary
         
     def visitor1_knowthepark(self):
-        print("The park is divided in 4 main areas. The carnivores are located at the east and west zones, whereas the herbivores are in the North and South.\nThe Helicopter ride is located at the South shore.\nThe Port is at the East shore.\nThe Visitor center is at the West island.\nYou can get a map with all locations and attractions at the Visitor Center.\n")
+        print("\nThe park is divided in 4 main areas. The carnivores are located at the east and west zones, whereas the herbivores are in the North and South.\nThe Helicopter ride is located at the South shore.\nThe Port is at the East shore.\nThe Visitor center is at the West island.\nYou can get a map with all locations and attractions at the Visitor Center.\n")
 
         askifrestart = Restart(user)
         return askifrestart.restart()
 
-    def visitor2_dinosaurcatalogue(self):
+    def visitor2_dinosaurcatalogue(self,dino):
         species=int(input("Jurassic Park has currently 8 different species of dinosaurus.\nPlease choose the number below of the one you'd like to read about:\n1.T-Rex\n2.Velociraptor\n3.Brachiosaurus\n4.Triceratops\n5.Compsognatus\n6.Gallimimus\n7.Stegosaurus\n8.Stegosaurus\n"))
 
-        print(f"The {self.dinosaur[0]} is a {self.dinosaur[1]} from {self.dinosaur[2]} period. It's a {self.dinosaur[3]} that used to live in {self.dinosaur[4]}. {self.dinosaur[5]}")
-
+        print(f"The {dino[species][0]} is a {dino[species][1]} from {dino[species][2]} period. It's a {dino[species][3]} that used to live in {dino[species][4]}. {dino[species][5]}")
+        
         askifrestart = Restart(user)
         return askifrestart.restart()
 
     def visitor3_attractions(self):
-        print("Jurassic Park has many options for its visitors\nPlease find below some of them\n1.Park Ride\nLab Cinema with Mr DNA\nHelicopter Ride\nAbove ride with Jurassic Monorail\nMuseum\nMany others! Get our Booklet in the Visitor Center and explore all options of Jurassic Park!\n")
+        print("\nJurassic Park has many options for its visitors. Please find below some of them\n1.Park Ride\n2.Lab Cinema with Mr DNA\n3.Helicopter Ride\n4.Above ride with Jurassic Monorail\n5.Museum\nMany others! Get our Booklet in the Visitor Center and explore all options of Jurassic Park!\n")
 
         askifrestart = Restart(user)
         return askifrestart.restart()
@@ -72,10 +72,13 @@ class VisitorsMenu: #OK- Encapsulamento
         if self.choice == 1:
             return self.visitor1_knowthepark()
         elif self.choice ==2:
-            return self.visitor2_dinosaurcatalogue()
+            return self.visitor2_dinosaurcatalogue(dinodictionary)
         else:
             return self.visitor3_attractions()
 
+
+teste3=VisitorsMenu(execucao.execute())
+print(teste3.visitor_execucao())
 
 class EmployeeMenu: 
     def __init__(self, choice, user):
