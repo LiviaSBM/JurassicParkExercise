@@ -7,19 +7,7 @@ print("Welcome to Jurassic Park interactive system\n")
 name = input("Please inform your name: \n")
 user = input("Please, indicate whether you are a Visitor or an Employee:\n")
 
-class MenuRoll: #Ok - Aloca o Visitante/Funcionario pro MainMenu certo
-    def __init__(self,user):
-        self.user = user
-
-    def execute(self):
-        if self.user=="visitor" or self.user=="Visitor":
-            user=MainMenu(name)
-            return user.menuvisitor()
-        elif self.user=="employee" or self.user=="Employee":
-            user=MainMenu(name)
-            return user.menuemployee()
-
-class MainMenu: #Ok - Pergunta qual item do menu o usuario quer
+class MainMenu: #Ok2 - Pergunta qual item do menu o usuario quer
     def __init__(self,name):
         self.name = name
 
@@ -42,7 +30,7 @@ class MainMenu: #Ok - Pergunta qual item do menu o usuario quer
 execucao = MenuRoll(user) #-TESTE DAS CLASSES ANTERIORES
 #print(execucao.execute())
 
-class VisitorsMenu: #Ok - Executa opcoes do Visitante
+class VisitorsMenu: #Executes Visitor's Menu
     def __init__(self, choice):
         self.choice = choice
         
@@ -74,7 +62,7 @@ class VisitorsMenu: #Ok - Executa opcoes do Visitante
         else:
             return self.visitor3_attractions()
 
-class Restart: #Ok - Pergunta se quer continuar navegando
+class Restart: #Asks User if he/she wants to navegate anymore
     def __init__(self,user):
         self.user = user
     
@@ -87,5 +75,17 @@ class Restart: #Ok - Pergunta se quer continuar navegando
         else:
             return "Thank you for using Jurassic Park's interactive system"
 
-teste3=VisitorsMenu(execucao.execute())
-print(teste3.visitor_execucao())
+class MenuRoll: #Abstraction - Directs user to the correct Menu
+    def __init__(self,user):
+        self.user = user
+
+    def execute(self):
+        if self.user=="visitor" or self.user=="Visitor":
+            user=MainMenu(name)
+            visitormenu = VisitorsMenu(user.menuvisitor())
+            return visitormenu.visitor_execucao()
+        elif self.user=="employee" or self.user=="Employee":
+            user=MainMenu(name)
+            employeemenu = VisitorsMenu(user.menuemployee())          
+            return employeemenu.visitor_execucao()
+        
