@@ -1,18 +1,18 @@
 #Student Name: Livia Menezes
 #POO Exercise - Luiza Code Python Bootcamp
 
-dinodictionary = {1: ["Tyrannosaurus Rex","theropod","Cretaceous","bipedal carnivore","North America","T. rex could grow to lengths of over 12.4 m (40.7 ft), up to 3.66–3.96 m (12–13 ft) tall at the hips, and 8.87 metric tons (9.78 short tons) in body mass.[2] Although other theropods rivaled or exceeded Tyrannosaurus rex in size, it is still among the largest known land predators and is estimated to have exerted the strongest bite force among all terrestrial animals."], 2: ["Velociraptor","theropod","Cretaceous","bipedal carnivore","North America","Smaller than other dromaeosaurids like Deinonychus and Achillobator, Velociraptor was about 1.5–2.07 m (4.9–6.8 ft) long with a body mass between 15–18.3 kg (33–40 lb), roughly the size of a turkey. However, it's believed to have been a smart dinosaur and have had good communication skills."], 3: ["Brachiosaurus","sauropod","late Jurassic","herbivorous","North America","Brachiosaurus is estimated to have been between 18 and 22 meters (59 and 72 ft) long. It had a disproportionately long neck, small skull, and large overall size, all of which are typical for sauropods. Atypically, Brachiosaurus had longer forelimbs than hindlimbs, which resulted in a steeply inclined trunk, and a proportionally shorter tail."], 4: ["Triceratops","ceratopsid","Late Cretaceous","herbivorous","North America","The name Triceratops, which literally means 'three-horned face'. Triceratops is one of the most recognizable of all dinosaurs and the most well-known ceratopsid. It was also one of the largest, up to 8–9 metres (26–30 ft) long and 5–9 metric tons (5.5–9.9 short tons) in body mass."], 5: ["Dilophosaurus","theropod","Early Jurassic","bipedal carnivore","North America","At about 7 m (23 ft) in length, with a weight of about 400 kg (880 lb), Dilophosaurus was one of the earliest large predatory dinosaurs and the largest known land-animal in North America at the time."], 6: ["Compsognathus","theropod","Jurassic","bipedal carnivore","Europe","Many presentations still describe Compsognathus as chicken-sized dinosaurs because of the size of the German specimen, which is now believed to be a juvenile. Compsognathus longipes is one of the few dinosaur species whose diet is known with certainty: the remains of small, agile lizards are preserved in the bellies of both specimens"], 7: ["Gallimimus","theropod","Late Creataceous","bipedal herbivorous","Asia","Gallimimus is the largest known ornithomimid; adults were about 6 metres (20 ft) long, 1.9 metres (6 ft 3 in) tall at the hip and weighed about 440–450 kilograms (970–990 lb)."], 8: ["Stegosaurus","armored dinosaur","Late Jurassic","herbivorous quadrupeds","Europe and North America","Due to their distinctive combination of broad, upright plates and tail tipped with spikes, Stegosaurus is one of the most recognizable kinds of dinosaurs. The function of this array of plates and spikes has been the subject of much speculation among scientists. Today, it is generally agreed that their spiked tails were most likely used for defense against predators, while their plates may have been used primarily for display, and secondarily for thermoregulatory functions."] }
+dinodictionary = {1: ["Tyrannosaurus Rex","theropod","Cretaceous","bipedal carnivore","North America","T. rex could grow to lengths of over 12.4 m (40.7 ft), up to 3.66–3.96 m (12–13 ft) tall at the hips, and 8.87 metric tons (9.78 short tons) in body mass.[2] Although other theropods rivaled or exceeded Tyrannosaurus rex in size, it is still among the largest known land predators and is estimated to have exerted the strongest bite force among all terrestrial animals.\n"], 2: ["Velociraptor","theropod","Cretaceous","bipedal carnivore","North America","Smaller than other dromaeosaurids like Deinonychus and Achillobator, Velociraptor was about 1.5–2.07 m (4.9–6.8 ft) long with a body mass between 15–18.3 kg (33–40 lb), roughly the size of a turkey. However, it's believed to have been a smart dinosaur and have had good communication skills.\n"], 3: ["Brachiosaurus","sauropod","late Jurassic","herbivorous","North America","Brachiosaurus is estimated to have been between 18 and 22 meters (59 and 72 ft) long. It had a disproportionately long neck, small skull, and large overall size, all of which are typical for sauropods. Atypically, Brachiosaurus had longer forelimbs than hindlimbs, which resulted in a steeply inclined trunk, and a proportionally shorter tail.\n"], 4: ["Triceratops","ceratopsid","Late Cretaceous","herbivorous","North America","The name Triceratops, which literally means 'three-horned face'. Triceratops is one of the most recognizable of all dinosaurs and the most well-known ceratopsid. It was also one of the largest, up to 8–9 metres (26–30 ft) long and 5–9 metric tons (5.5–9.9 short tons) in body mass.\n"], 5: ["Dilophosaurus","theropod","Early Jurassic","bipedal carnivore","North America","At about 7 m (23 ft) in length, with a weight of about 400 kg (880 lb), Dilophosaurus was one of the earliest large predatory dinosaurs and the largest known land-animal in North America at the time.\n"], 6: ["Compsognathus","theropod","Jurassic","bipedal carnivore","Europe","Many presentations still describe Compsognathus as chicken-sized dinosaurs because of the size of the German specimen, which is now believed to be a juvenile. Compsognathus longipes is one of the few dinosaur species whose diet is known with certainty: the remains of small, agile lizards are preserved in the bellies of both specimens\n"], 7: ["Gallimimus","theropod","Late Creataceous","bipedal herbivorous","Asia","Gallimimus is the largest known ornithomimid; adults were about 6 metres (20 ft) long, 1.9 metres (6 ft 3 in) tall at the hip and weighed about 440–450 kilograms (970–990 lb).\n"], 8: ["Stegosaurus","armored dinosaur","Late Jurassic","herbivorous quadrupeds","Europe and North America","Due to their distinctive combination of broad, upright plates and tail tipped with spikes, Stegosaurus is one of the most recognizable kinds of dinosaurs. The function of this array of plates and spikes has been the subject of much speculation among scientists. Today, it is generally agreed that their spiked tails were most likely used for defense against predators, while their plates may have been used primarily for display, and secondarily for thermoregulatory functions.\n"] }
 
 print("Welcome to Jurassic Park interactive system\n")
 name = input("Please inform your name: \n")
 user = input("Please, indicate whether you are a Visitor or an Employee:\n")
 
-class MainMenu: #Ok2 - Pergunta qual item do menu o usuario quer
+class MainMenu: #Presents User menu
     def __init__(self,name):
         self.name = name
 
     def menuemployee(self):
-        print(f"Welcome, {self.name}. What would you like to check?\nMenu:\n1.Payment information\n2.Mr DNA Lab\n")
+        print(f"Welcome, {self.name}. What would you like to check?\nMenu:\n1.Payment information\n2.Laboratory\n")
         
         choice = int(input("Please choose either 1 or 2 as per the options shown above:\n"))
         while choice !=1 and choice !=2:
@@ -26,9 +26,6 @@ class MainMenu: #Ok2 - Pergunta qual item do menu o usuario quer
         while choice !=1 and choice !=2 and choice != 3:
             choice = int(input("Invalid option. Please choose either 1, 2 or 3 as per the options shown above:\n"))
         return choice
-
-execucao = MenuRoll(user) #-TESTE DAS CLASSES ANTERIORES
-#print(execucao.execute())
 
 class VisitorsMenu: #Executes Visitor's Menu
     def __init__(self, choice):
@@ -75,7 +72,36 @@ class Restart: #Asks User if he/she wants to navegate anymore
         else:
             return "Thank you for using Jurassic Park's interactive system"
 
-class MenuRoll: #Abstraction - Directs user to the correct Menu
+class EmployeeMenu: #Encapsulation - Executes Employees's Menu
+    def __init__(self, choice):
+        self.choice = choice
+        
+    def authorized_only(self):
+        return "This is a restricted access library - You are not authorized"
+
+    def emp1_payment(self,emp_num):
+        if emp_num == 456 or emp_num == 890 or emp_num == 123:
+            return f"Your next salary will be deposited in 6 days with the amount of $2500.00"
+        else:
+            return "This is a restricted access area - You are not authorized"
+
+    def emp2_lab(self,emp_num):
+        codeacess=input("Please enter your code of access:\n")
+        if emp_num == 890 and codeacess == "drwu1993":
+            return "The access to the laboratory files is granted. Welcome, Dr Wu"
+        else:
+            return self.authorized_only()
+
+    def employee_execucao(self):
+
+        emp_num=int(input("Please enter your employee number:\n"))
+        
+        if self.choice == 1:
+            return self.emp1_payment(emp_num)
+        elif self.choice ==2:
+            return self.emp2_lab(emp_num)
+
+class MenuRoll: #Abstraction - Redirects user to its menu
     def __init__(self,user):
         self.user = user
 
@@ -86,6 +112,9 @@ class MenuRoll: #Abstraction - Directs user to the correct Menu
             return visitormenu.visitor_execucao()
         elif self.user=="employee" or self.user=="Employee":
             user=MainMenu(name)
-            employeemenu = VisitorsMenu(user.menuemployee())          
-            return employeemenu.visitor_execucao()
+            employeemenu = EmployeeMenu(user.menuemployee())          
+            return employeemenu.employee_execucao()
+
+jprun = MenuRoll(user)
+print(jprun.execute())
         
